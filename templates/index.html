@@ -8,11 +8,50 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Link custom CSS -->
     <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <style>
+        /* Custom styling */
+        body {
+            background-color: #1a1a2e;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            background-color: #0f3460;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h1 {
+            color: #e94560;
+            font-weight: bold;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+        .btn-custom {
+            background-color: #e94560;
+            color: #fff;
+            font-size: 1.1rem;
+            padding: 0.7rem 1.5rem;
+            margin-top: 1.5rem;
+            border: none;
+            border-radius: 5px;
+        }
+        .btn-custom:hover {
+            background-color: #e94560;
+            color: #fff;
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
-        <p>Welcome to Mars Exploration Page</p>
-        <a href="/stage1">PLease click on below to start the registration</a>
+        <h1>Welcome to Mars Exploration</h1>
+        <p>Embark on a journey of a lifetime. Explore the wonders of Mars and be a part of our space exploration mission.</p>
+        <a href="/stage1" class="btn btn-custom">Start Registration</a>
     </div>
 
     <!-- Bootstrap and Custom JS -->
