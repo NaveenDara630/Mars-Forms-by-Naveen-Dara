@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-container">
+    <h2>Stage 2: Travel Preferences</h2>
+    <form method="POST" action="{{ url_for('main.stage2') }}">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.departure_date.label(class="form-label") }}
+            {{ form.departure_date(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.return_date.label(class="form-label") }}
+            {{ form.return_date(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.accommodation.label(class="form-label") }}
+            {{ form.accommodation(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.special_requests.label(class="form-label") }}
+            {{ form.special_requests(class="form-control") }}
+        </div>
+        <div class="d-flex justify-content-between mt-3">
+            <button name="back" value="back" class="btn btn-secondary">Back</button>
+            <button type="submit" class="btn btn-primary">Next</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

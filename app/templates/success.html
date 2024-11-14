@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="alert alert-success text-center mt-5" role="alert">
+    <h4 class="alert-heading">Success!</h4>
+    <p>Thank you for your interest in visiting Mars! We have received your application and will be in touch soon.</p>
+    <hr>
+    <a href="{{ url_for('main.stage1') }}" class="btn btn-primary mt-3">Start New Application</a>
+</div>
+{% endblock %}

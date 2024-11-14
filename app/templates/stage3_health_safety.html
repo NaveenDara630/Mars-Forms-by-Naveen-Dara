@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-container">
+    <h2>Stage 3: Health and Safety</h2>
+    <form method="POST" action="{{ url_for('main.stage3') }}">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.health_declaration.label(class="form-label") }}
+            {{ form.health_declaration(class="form-check-input ml-2") }}
+        </div>
+        <div class="form-group">
+            {{ form.emergency_contact.label(class="form-label") }}
+            {{ form.emergency_contact(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.medical_conditions.label(class="form-label") }}
+            {{ form.medical_conditions(class="form-control") }}
+        </div>
+        <div class="d-flex justify-content-between mt-3">
+            <button name="back" value="back" class="btn btn-secondary">Back</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

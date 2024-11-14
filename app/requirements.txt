@@ -1,0 +1,37 @@
+pip install Flask-SQLAlchemy
+pip install Flask Flask-WTF WTForms email-validator
+pip install Flask Flask-WTF WTForms email-validator pytest
+
+pip freeze 
+
+
+
+2. Steps to Run the Application
+Set Up a Virtual Environment (optional but recommended)
+
+
+python3 -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+Install Required Libraries
+
+
+pip install Flask Flask-WTF WTForms email-validator
+
+
+Set Environment Variables for Flask (Linux/Mac)
+
+export FLASK_APP=app.py
+export FLASK_ENV=development  # Enables debug mode
+On Windows, use:
+
+set FLASK_APP=app.py
+set FLASK_ENV=development
+
+
+Run the Flask Application
+
+flask run
+
+Access the Application
+
+Open your web browser and go to http://127.0.0.1:5000/stage1 to start the multi-stage application form.

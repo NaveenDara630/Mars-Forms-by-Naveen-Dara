@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-container">
+    <h2>Stage 1: Personal Information</h2>
+    <form method="POST" action="{{ url_for('main.stage1') }}">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.full_name.label(class="form-label") }}
+            {{ form.full_name(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.date_of_birth.label(class="form-label") }}
+            {{ form.date_of_birth(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.nationality.label(class="form-label") }}
+            {{ form.nationality(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.email.label(class="form-label") }}
+            {{ form.email(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.phone.label(class="form-label") }}
+            {{ form.phone(class="form-control") }}
+        </div>
+        <button type="submit" class="btn btn-primary btn-block mt-3">Next</button>
+    </form>
+</div>
+{% endblock %}

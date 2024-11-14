@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-container">
+    <h2>Submitted Applications</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Date of Birth</th>
+                <th>Nationality</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Departure Date</th>
+                <th>Return Date</th>
+                <th>Accommodation</th>
+                <th>Health Declaration</th>
+                <th>Emergency Contact</th>
+                <th>Medical Conditions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for applicant in applicants %}
+            <tr>
+                <td>{{ applicant.full_name }}</td>
+                <td>{{ applicant.date_of_birth }}</td>
+                <td>{{ applicant.nationality }}</td>
+                <td>{{ applicant.email }}</td>
+                <td>{{ applicant.phone }}</td>
+                <td>{{ applicant.departure_date }}</td>
+                <td>{{ applicant.return_date }}</td>
+                <td>{{ applicant.accommodation }}</td>
+                <td>{{ 'Yes' if applicant.health_declaration else 'No' }}</td>
+                <td>{{ applicant.emergency_contact }}</td>
+                <td>{{ applicant.medical_conditions or 'N/A' }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
